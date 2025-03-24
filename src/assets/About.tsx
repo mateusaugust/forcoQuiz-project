@@ -42,7 +42,7 @@ export function About() {
           
             <p style={{textAlign:'justify'}}>
               O ForcoQuiz é um jogo educativo que combina elementos de quiz e
-              forca. Em vez de adivinhar uma palavra, o jogador deve responder
+              forca. <br/>Em vez de adivinhar uma palavra, o jogador deve responder
               perguntas ou completar frases, possuindo um número limitado de
               tentativas.<br/><br/>
         
