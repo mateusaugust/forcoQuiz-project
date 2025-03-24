@@ -1,0 +1,48 @@
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+export function TypePlay() {
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#e6dbe6",
+        width: "100%",
+        height: "100vh",
+      }}
+    >
+      <Card
+        style={{ textAlign: "center", position: "absolute", width:'50%' }}
+      >
+        <CardHeader>
+          <CardTitle style={{ fontSize: "30px", color: "#001EFF" }}>
+           Escolha o Tipo de Jogo
+          </CardTitle>
+          <CardDescription>Versão Demo 0.0.1</CardDescription>
+        </CardHeader>
+
+        <CardContent
+          style={{ display: "flex", flexDirection: "column", gap: "15px" }}
+        >
+          <Button style={{ backgroundColor: "#A855F7"}}>Símbolos Iguais</Button>
+
+          <Button style={{ backgroundColor: "#3B82F6"}}>
+            Completar Frase
+          </Button>
+
+          <Button style={{ backgroundColor: "#14B8A6"}}>Múltipla Escolha </Button>
+
+          <Button style={{ backgroundColor: "#6B7280"}}>Voltar</Button>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
