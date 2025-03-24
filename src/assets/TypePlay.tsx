@@ -6,8 +6,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 export function TypePlay() {
+  const navigate = useNavigate();
+
   return (
     <div
       style={{
@@ -19,12 +22,10 @@ export function TypePlay() {
         height: "100vh",
       }}
     >
-      <Card
-        style={{ textAlign: "center", position: "absolute", width:'50%' }}
-      >
+      <Card style={{ textAlign: "center", position: "absolute", width: "50%" }}>
         <CardHeader>
           <CardTitle style={{ fontSize: "30px", color: "#001EFF" }}>
-           Escolha o Tipo de Jogo
+            Escolha o Tipo de Jogo
           </CardTitle>
           <CardDescription>Versão Demo 0.0.1</CardDescription>
         </CardHeader>
@@ -32,15 +33,27 @@ export function TypePlay() {
         <CardContent
           style={{ display: "flex", flexDirection: "column", gap: "15px" }}
         >
-          <Button style={{ backgroundColor: "#A855F7"}}>Símbolos Iguais</Button>
+          <Button style={{ backgroundColor: "#A855F7" }}>
+            Símbolos Iguais
+          </Button>
 
-          <Button style={{ backgroundColor: "#3B82F6"}}>
+          <Button style={{ backgroundColor: "#3B82F6" }}>
             Completar Frase
           </Button>
 
-          <Button style={{ backgroundColor: "#14B8A6"}}>Múltipla Escolha </Button>
+          <Button style={{ backgroundColor: "#14B8A6" }}>
+            Múltipla Escolha{" "}
+          </Button>
 
-          <Button style={{ backgroundColor: "#6B7280"}}>Voltar</Button>
+          <Button
+            style={{
+              backgroundColor: "#6B7280",
+            }}
+            onClick={() => navigate("/")}
+          
+          >
+            Voltar
+          </Button>
         </CardContent>
       </Card>
     </div>

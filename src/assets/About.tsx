@@ -7,10 +7,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Separator } from "@radix-ui/react-separator";
+import { useNavigate } from "react-router";
 
 export function About() {
-  return (
+
+  const navigate = useNavigate();
+    return (
     <div
       style={{
         display: "flex",
@@ -53,7 +55,7 @@ export function About() {
               <b>Completar Frases (50xp):</b> Complete a frase com a palavra correta.<br/>
               <b>Múltipla Escolha (100xp):</b> Escolha a resposta correta entre as
               opções.
-              <br />
+              <br /><br/>
             
 
               Desenvolvido por <strong>Mateus Augusto da Silva</strong> como parte de um projeto educacionas
@@ -68,7 +70,7 @@ export function About() {
             alignItems: "center",
           }}
         >
-          <Button style={{ backgroundColor: "#6B7280" }}>Voltar</Button>
+          <Button onClick={()=>navigate('/')} style={{ backgroundColor: "#6B7280" }}>Voltar</Button>
         </CardFooter>
       </Card>
     </div>

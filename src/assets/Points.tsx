@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router";
 import {
   Card,
   CardContent,
@@ -9,6 +10,9 @@ import {
 } from "@/components/ui/card";
 
 export function Points() {
+
+  const navigate = useNavigate()
+
   return (
     <div
       style={{
@@ -54,7 +58,7 @@ export function Points() {
             alignItems: "center",
           }}
         >
-          <Button style={{ backgroundColor: "#6B7280" }}>Voltar</Button>
+          <Button onClick={()=>navigate('/')}  style={{ backgroundColor: "#6B7280" }}>Voltar</Button>
         </CardFooter>
       </Card>
     </div>
