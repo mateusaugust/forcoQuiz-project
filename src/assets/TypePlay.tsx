@@ -22,7 +22,7 @@ export function TypePlay() {
         height: "100vh",
       }}
     >
-      <Card style={{ textAlign: "center", position: "absolute", width: "50%" }}>
+      <Card style={{ textAlign: "center", position: "absolute", width:'70%'}}>
         <CardHeader>
           <CardTitle style={{ fontSize: "30px", color: "#001EFF" }}>
             Escolha o Tipo de Jogo
