@@ -33,16 +33,16 @@ export function TypePlay() {
         <CardContent
           style={{ display: "flex", flexDirection: "column", gap: "15px" }}
         >
-          <Button style={{ backgroundColor: "#A855F7" }}>
+          <Button onClick={()=>navigate("/game/1")} style={{ backgroundColor: "#A855F7" }}>
             Símbolos Iguais
           </Button>
 
-          <Button style={{ backgroundColor: "#3B82F6" }}>
+          <Button onClick={()=>navigate("/game/2")} style={{ backgroundColor: "#3B82F6" }}>
             Completar Frase
           </Button>
 
-          <Button style={{ backgroundColor: "#14B8A6" }}>
-            Múltipla Escolha{" "}
+          <Button onClick={()=>navigate("/game/3")} style={{ backgroundColor: "#14B8A6" }}>
+            Múltipla Escolha
           </Button>
 
           <Button
