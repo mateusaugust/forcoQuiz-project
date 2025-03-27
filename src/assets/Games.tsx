@@ -133,11 +133,11 @@ export function Games() {
                   {"Codigo com erro: if()[]"}
                 </div>
 
-                <div style={{display:'flex', alignItems:"center", justifyContent:"center", gap:'15px', marginTop:'15px'}}>
+                <div style={{display:'flex', alignItems:"center", justifyContent:"center", marginTop:'15px', gap:'10px'}}>
                   {data3.map((op) => (
-                    <div className="p-2 hover:bg-gray-200" style={{borderRadius:"10px"}}>
+                    
                       <Button   style={{backgroundColor:op?.colorB,boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)"}}>{op?.respost}</Button>
-                    </div>
+                    
                   ))}
                 </div>
               </>
