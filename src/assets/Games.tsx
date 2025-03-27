@@ -9,6 +9,12 @@ export function Games() {
   const parametros = useParams();
 
   const data2 = ["opção 1", "opção2", "opção3"];
+  const data3 = [
+    { respost: "Porque1...", colorB: "#19b5a5" },
+    { respost: "Porque2...", colorB: "#ede89d" },
+    ,
+    { respost: "Porque3...", colorB: "#ff6933" },
+  ];
 
   return (
     <div
@@ -57,7 +63,7 @@ export function Games() {
             {parametros.tipo == "1" && "Digite a tag que completa : <h1>"}
             {parametros.tipo == "2" &&
               "Complete o Código com a opção correta: "}
-            {parametros.tipo == "3" && "Encontre o erro: "}
+            {parametros.tipo == "3" && "Encontre o erro: <Texto descritivo>"}
           </h1>
 
           <div
@@ -109,6 +115,28 @@ export function Games() {
                     >
                       <input type="checkbox" />
                       <label>{op}</label>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+
+            {parametros.tipo == "3" && (
+              <>
+                <div
+                  style={{
+                    padding: "15px",
+                    borderRadius: "10px",
+                    boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                  }}
+                >
+                  {"Codigo com erro: if()[]"}
+                </div>
+
+                <div style={{display:'flex', alignItems:"center", justifyContent:"center", gap:'15px', marginTop:'15px'}}>
+                  {data3.map((op) => (
+                    <div className="p-2 hover:bg-gray-200" style={{borderRadius:"10px"}}>
+                      <Button   style={{backgroundColor:op?.colorB,boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)"}}>{op?.respost}</Button>
                     </div>
                   ))}
                 </div>
