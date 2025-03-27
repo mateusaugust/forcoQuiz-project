@@ -38,11 +38,11 @@ export function TypePlay() {
           </Button>
 
           <Button onClick={()=>navigate("/game/2")} style={{ backgroundColor: "#3B82F6" }}>
-            Completar Frase
+            Completar o Codigo
           </Button>
 
           <Button onClick={()=>navigate("/game/3")} style={{ backgroundColor: "#14B8A6" }}>
-            Múltipla Escolha
+            Encontre o Erro
           </Button>
 
           <Button

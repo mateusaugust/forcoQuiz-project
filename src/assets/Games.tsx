@@ -8,6 +8,8 @@ export function Games() {
   const navigate = useNavigate();
   const parametros = useParams();
 
+  const data2 = ["opção 1", "opção2", "opção3"];
+
   return (
     <div
       style={{
@@ -29,7 +31,7 @@ export function Games() {
         }}
       >
         <Button
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/jogar")}
           style={{
             marginBottom: "10px",
             width: "20px",
@@ -37,7 +39,7 @@ export function Games() {
             fontSize: "10px",
           }}
         >
-          <IoIosArrowRoundBack />{" "}
+          <IoIosArrowRoundBack />
         </Button>
         <div
           style={{
@@ -53,8 +55,9 @@ export function Games() {
         <div>
           <h1 style={{ fontSize: "13px", marginTop: "15px" }}>
             {parametros.tipo == "1" && "Digite a tag que completa : <h1>"}
-            {parametros.tipo == "2" && "Complete o Código: "}
-            {parametros.tipo == "3" && "Responda: "}
+            {parametros.tipo == "2" &&
+              "Complete o Código com a opção correta: "}
+            {parametros.tipo == "3" && "Encontre o erro: "}
           </h1>
 
           <div
@@ -62,6 +65,7 @@ export function Games() {
               display: "flex",
               justifyContent: "center",
               marginTop: "15px",
+              flexDirection: "column",
             }}
           >
             {parametros.tipo == "1" && (
@@ -72,10 +76,54 @@ export function Games() {
                   gap: "10px",
                   justifyContent: "center",
                   alignItems: "center",
-                  width: "70%",
                 }}
               >
                 <Textarea placeholder="Evite espaços desnecessários.(Sistema para remove-los automático esta sendo implementado)" />
+              </div>
+            )}
+
+            {parametros.tipo == "2" && (
+              <>
+                <div
+                  style={{
+                    padding: "15px",
+                    borderRadius: "10px",
+                    boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                  }}
+                >
+                  Codigo
+                </div>
+
+                <div>
+                  {data2.map((op) => (
+                    <div
+                      key={op}
+                      className="p-2 hover:bg-gray-200"
+                      style={{
+                        marginTop: "15px",
+                        borderRadius: "10px",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "15px",
+                      }}
+                    >
+                      <input type="checkbox" />
+                      <label>{op}</label>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+
+            {parametros.tipo != "3" && (
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginTop: "15px",
+                }}
+              >
                 <Button>Enviar resposta!</Button>
               </div>
             )}
