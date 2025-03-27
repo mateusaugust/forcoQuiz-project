@@ -133,7 +133,7 @@ export function Games() {
                   {"Codigo com erro: if()[]"}
                 </div>
 
-                <div style={{display:'flex', alignItems:"center", justifyContent:"center", marginTop:'15px', gap:'10px'}}>
+                <div style={{display:'flex', alignItems:"center", justifyContent:"center", marginTop:'15px', gap:'5px'}}>
                   {data3.map((op) => (
                     
                       <Button   style={{backgroundColor:op?.colorB,boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)"}}>{op?.respost}</Button>
